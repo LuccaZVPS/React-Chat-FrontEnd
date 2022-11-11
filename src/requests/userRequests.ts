@@ -37,8 +37,10 @@ export const sendRequest = async (email: string, token: string) => {
       return jsonRequest;
     }
     if (request.status === 409) {
+      // eslint-disable-next-line
       throw "Request already sent";
     }
+
     if (request.status === 404) {
       throw "User not found";
     }

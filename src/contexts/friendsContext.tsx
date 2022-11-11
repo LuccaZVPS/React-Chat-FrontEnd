@@ -31,6 +31,7 @@ export default function FriendsContext({ children }: props) {
       }
     });
     setFriendsFiltred(filtred.map((f) => f));
+    // eslint-disable-next-line
   }, [filter]);
 
   useEffect(() => {
@@ -52,6 +53,7 @@ export default function FriendsContext({ children }: props) {
     newList = newList.filter((req) => req._id !== newFriend._id);
     newList.push(newFriend);
     setFriends(newList.map((f) => f));
+    // eslint-disable-next-line
   }, [newFriend]);
 
   return (
